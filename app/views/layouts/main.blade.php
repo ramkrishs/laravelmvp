@@ -26,9 +26,9 @@
         <h3 class="text-muted">Project name</h3>
         <nav>
           <ul class="nav nav-justified">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Link1</a></li>
-            <li><a href="#">Link2</a></li>
+            <li class="active"><a href="{{ URL::to('/login')}}">Login</a></li>
+            <li><a href="{{ URL::to('/securehome')}}">Secure page</a></li>
+            <li><a href="{{ URL::to('/logout')}}">Logout</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>

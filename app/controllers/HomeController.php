@@ -15,9 +15,24 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function showLogin()
 	{
 		return View::make('login');
+	}
+
+	public function doLogin()
+	{
+		$credentials = 	Input::only('username','password');
+		if(Auth::attempt($credentials)){
+			return Redirect::intended('/securehome');
+		}
+		return Redirect::to('login');
+	}
+
+	public function showLogout()
+	{	
+		Auth::logout();
+		return View::make('logout');
 	}
 
 }
